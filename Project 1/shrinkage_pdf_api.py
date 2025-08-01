@@ -108,35 +108,6 @@ else:
 
 # COMMAND ----------
 
-# # Define the path to the PDF file
-# file_path = '/Workspace/Shared/BI/pipelines/adhoc/natgas_api/NTS Shrinkage Seasonal and Quarter Forecast Gas Volumes FY24-25 Sep 24.pdf'
-
-# # Open the PDF file using pdfplumber
-# with pdfplumber.open(file_path) as pdf:
-#     # Loop through each page and extract the text
-#     for page_number, page in enumerate(pdf.pages):
-#         text = page.extract_text()
-#         print(f"--- Page {page_number + 1} ---")
-#         print(text)
-#         print("\n")
-
-
-# COMMAND ----------
-
-# # Open the PDF file using pdfplumber
-# with pdfplumber.open(file_path) as pdf:
-#     # Loop through each page and extract tables
-#     for page_number, page in enumerate(pdf.pages):
-#         tables = page.extract_tables()
-#         for table_number, table in enumerate(tables):
-#             print(f"--- Page {page_number + 1}, Table {table_number + 1} ---")
-#             for row in table:
-#                 print(row)
-#             print("\n")
-
-
-# COMMAND ----------
-
 # Initialize Spark session
 spark = SparkSession.builder.appName("PDF to DataFrame Upsert").getOrCreate()
 
